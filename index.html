@@ -5,53 +5,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/style.css">
   <title>Interactive pricing component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-
-  </style>
 </head>
 
 <body>
-  <header>
-    <h1>Simple, traffic-based pricing</h1>
-    <p>Sign-up for our 30-day trial. No credit card required.</p>
+  <header class='header'>
+    <h1 class='header__title'>Simple, traffic-based pricing</h1>
+    <p class='header__subtitle'>Sign-up for our 30-day trial. No credit card required.</p>
   </header>
-  <main>
-    <div>
-      <span><span></span>Pageviews</span>
-      <span>$<span></span>/month</span>
+
+  <main class='main'>
+    <div class='main__top'>
+      <div class='main__top__left'>
+        <span class='main__top__k'></span><span class="pain__top__pageviews">Pageviews</span>
+      </div>
+      <div class='main__top__right'>
+        <span class='main__top_dollar'>$</span><span class='main__top__total'></span><span
+          class='main__top__month'>/month</span>
+      </div>
     </div>
-    <div>
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    <div class='main__slider'>
+      <input class='main__slider__input' type="range" min="1" max="100" value="50" class="slider" id="myRange">
     </div>
-    <div>
-      <span>Monthly Billing</span>
-      <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-      </label>
-      <span>Yearly Billing</span>
-      <span>25% discount</span>
+    <div class='main__bottom'>>
+      <span class='main__bottom__monthly'>Monthly Billing</span>
+      <span class='main__bottom__toggle'>
+        <label class='main__bottom__label'>
+          <input class='main__bottom__input' type="checkbox">
+          <span class='main__bottom__slider'></span>
+        </label>
+      </span>
+      <span class='main__bottom__yearly'>Yearly Billing</span>
+      <span class='main__bottom__discount'>25% discount</span>
     </div>
-    <div>
-      <div></div>
-      <ul>
-        <li> Unlimited websites</li>
-        <li>100% data ownership</li>
-        <li>Email reports</li>
-      </ul>
-      <div><button>Start my trial</button></div>
-    </div>
+    <footer class='main__footer'>
+      <div class='main__footer__ul'>
+        <ul class='main__footer__items'>
+          <li class='main__footer__item'>Unlimited websites</li>
+          <li class='main__footer__item'>100% data ownership</li>
+          <li class='main__footer__item'>Email reports</li>
+        </ul>
+      </div>
+      <div class='main__footer__btn'>
+        <button class='main__footer__btn__start'>Start my trial</button>
+      </div>
+    </footer>
   </main>
+
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://adam-mann.co">Adam Mann</a>.
   </footer>
+
 </body>
 
 </html>
