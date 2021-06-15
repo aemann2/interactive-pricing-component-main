@@ -19,21 +19,28 @@
   <main class='main'>
     <div class='main__top'>
       <div class='main__top__left'>
-        <span class='main__top__k'></span><span class="pain__top__pageviews">Pageviews</span>
+        <p class='main__top__left__par'>
+          <span class='main__top__k'>100k</span>
+          <span class="main__top__pageviews">Pageviews</span>
+        </p>
+      </div>
+      <div class='main__slider'>
+        <input class='main__slider__input' type="range" min="0" max="80" value="40" step="20" class="slider"
+          id="slider">
       </div>
       <div class='main__top__right'>
-        <span class='main__top_dollar'>$</span><span class='main__top__total'></span><span
-          class='main__top__month'>/month</span>
+        <p class='main__top__right__par'>
+          <span class='main__top__dollar'>$</span>
+          <span class='main__top__total'>16</span>
+          <span class='main__top__month'>/month</span>
+        </p>
       </div>
     </div>
-    <div class='main__slider'>
-      <input class='main__slider__input' type="range" min="1" max="100" value="50" class="slider" id="myRange">
-    </div>
-    <div class='main__bottom'>>
+    <div class='main__bottom'>
       <span class='main__bottom__monthly'>Monthly Billing</span>
       <span class='main__bottom__toggle'>
         <label class='main__bottom__label'>
-          <input class='main__bottom__input' type="checkbox">
+          <input class='main__bottom__input' id='toggle' type="checkbox">
           <span class='main__bottom__slider'></span>
         </label>
       </span>
@@ -58,7 +65,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://adam-mann.co">Adam Mann</a>.
   </footer>
-
+  <script src='main.js'></script>
 </body>
 
 </html>
