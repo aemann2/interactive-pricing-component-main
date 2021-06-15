@@ -9,27 +9,27 @@ slider.addEventListener('input', (e) => {
 	switch(parseInt(e.target.value)) {
 		case 0: 
 			pageviews.innerHTML = '10k';
-			total.innerHTML = '8';
+			total.innerHTML = '$8.00';
 			break;
 		case 20: 
 			pageviews.innerHTML = '50k';
-			total.innerHTML = '12';
+			total.innerHTML = '$12.00';
 			break;
 		case 40: 
 			pageviews.innerHTML = '100k';
-			total.innerHTML = '16';
+			total.innerHTML = '$16.00';
 			break;
 		case 60: 
 			pageviews.innerHTML = '500k';
-			total.innerHTML = '24';
+			total.innerHTML = '$24.00';
 			break;
 		case 80: 
 			pageviews.innerHTML = '1M';
-			total.innerHTML = '36';
+			total.innerHTML = '$36.00';
 			break;
 		default:
 			pageviews.innerHTML = '100k';
-			total.innerHTML = '16';
+			total.innerHTML = '$16.00';
 	}
 });
 
