@@ -8,19 +8,19 @@ const discount = document.querySelector('.main__bottom__discount');
 slider.addEventListener('input', (e) => {
 	switch(parseInt(e.target.value)) {
 		case 0: 
-			pageviews.innerHTML = '10k';
+			pageviews.innerHTML = '10K';
 			total.innerHTML = '$8.00';
 			break;
 		case 20: 
-			pageviews.innerHTML = '50k';
+			pageviews.innerHTML = '50K';
 			total.innerHTML = '$12.00';
 			break;
 		case 40: 
-			pageviews.innerHTML = '100k';
+			pageviews.innerHTML = '100K';
 			total.innerHTML = '$16.00';
 			break;
 		case 60: 
-			pageviews.innerHTML = '500k';
+			pageviews.innerHTML = '500K';
 			total.innerHTML = '$24.00';
 			break;
 		case 80: 
@@ -28,7 +28,7 @@ slider.addEventListener('input', (e) => {
 			total.innerHTML = '$36.00';
 			break;
 		default:
-			pageviews.innerHTML = '100k';
+			pageviews.innerHTML = '100K';
 			total.innerHTML = '$16.00';
 	}
 });

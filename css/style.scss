@@ -1,3 +1,4 @@
+@import './slider';
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
 
 // Variables //
@@ -35,9 +36,52 @@ body {
 	min-height: 100vh;
 	font-size: 100%;
 	font-family: 'Manrope', sans-serif;
+	background: url('../images/bg-pattern.svg') no-repeat 0% -40%;
+	padding: 3rem 1.5rem;
+	color: $gray-blue-3;
+}
+
+button, input {
+	cursor: pointer;
 }
 
 // Main styles //
+
+.header {
+	text-align: center;
+	height: 9rem;
+	background: url('../images/pattern-circles.svg') no-repeat center;
+	padding-top: 2rem;
+
+	&__title {
+		font-size: 1.4rem;
+		color: $dark-blue;
+	}
+
+	&__subtitle {
+		width: 21ch;
+		line-height: 1.6;
+		margin: .8rem auto;
+	}
+}
+
+.main {
+	background-color: $white;
+	border-radius: 10px;
+	text-align: center;
+	margin-top: 2rem;
+	padding: 2rem 1rem;
+
+	&__top {
+		&__pageviews {
+			text-transform: uppercase;
+		}
+	}
+
+	&__slider {
+		margin-top: 1rem;
+	}
+}
 
 .attribution {
 	font-size: 11px;
