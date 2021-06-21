@@ -1,79 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
-input[type="range"] {
-  margin: auto;
+.range-slider__range {
   -webkit-appearance: none;
-  position: relative;
-  overflow: hidden;
+  width: 90%;
+  height: 10px;
+  border-radius: 5px;
+  background: #eaeefb;
+}
+
+.range-slider__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 40px;
   height: 40px;
-  width: 200px;
+  border-radius: 50%;
+  background-color: #10d5c2;
+  background-image: url("../images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-shadow: -2px 11px 20px 2px #a5f3eb;
+          box-shadow: -2px 11px 20px 2px #a5f3eb;
   cursor: pointer;
-  border-radius: 0;
-  /* iOS */
 }
 
-::-webkit-slider-runnable-track {
-  background: #ddd;
-}
-
-/*
-* 1. Set to 0 width and remove border for a slider without a thumb
-*/
-::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 20px;
-  /* 1 */
+.range-slider__range::-moz-range-thumb {
+  width: 40px;
   height: 40px;
-  background: #fff;
-  -webkit-box-shadow: -100vw 0 0 100vw dodgerblue;
-          box-shadow: -100vw 0 0 100vw dodgerblue;
-  border: 2px solid #999;
-  /* 1 */
+  border: 0;
+  border-radius: 50%;
+  background-color: #10d5c2;
+  background-image: url("../images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  box-shadow: -2px 11px 20px 2px #a5f3eb;
 }
 
 ::-moz-range-track {
-  height: 40px;
-  background: #ddd;
-}
-
-::-moz-range-thumb {
-  background: #fff;
-  height: 40px;
-  width: 20px;
-  border: 3px solid #999;
-  border-radius: 0 !important;
-  box-shadow: -100vw 0 0 100vw dodgerblue;
-  box-sizing: border-box;
-}
-
-::-ms-fill-lower {
-  background: dodgerblue;
-}
-
-::-ms-thumb {
-  background: #fff;
-  border: 2px solid #999;
-  height: 40px;
-  width: 20px;
-  box-sizing: border-box;
-}
-
-::-ms-ticks-after {
-  display: none;
-}
-
-::-ms-ticks-before {
-  display: none;
-}
-
-::-ms-track {
-  background: #ddd;
-  color: transparent;
-  height: 40px;
-  border: none;
-}
-
-::-ms-tooltip {
-  display: none;
+  border: 0;
 }
 
 html {
