@@ -1,4 +1,5 @@
-@import './slider';
+@import './rangeSlider';
+@import './toggleSwitch';
 @import './colors';
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
 
@@ -59,14 +60,51 @@ button, input {
 	padding: 2rem 1rem;
 
 	&__top {
-		&__pageviews {
+		&__pageviews, &__k {
+			font-size: .9rem;
 			text-transform: uppercase;
+			letter-spacing: .1rem;
+		}
+
+		&__right__par {
+			display: flex;
+			justify-content: center;
+		}
+
+		&__total {
+			color: $dark-blue;
+			font-size: 2rem;
+			font-weight: 800;
+		}
+
+		&__month {
+			align-self: center;
+			margin-left: .3rem;
 		}
 	}
 
-	&__slider {
-		margin-top: 1rem;
+	&__bottom {
+		margin: 2rem 0 0 -.5rem;
+		font-size: .9rem;
+
+		&__discount {
+			font-size: .8rem;
+			padding: 2px 7px;
+			border-radius: 10px;
+			background-color: $gray-red;
+			color: $light-red;
+		}
+
+		&__divider {
+			margin: 2rem 0;
+			border: none;
+			border-top: 1px solid $gray-blue-1;
+		}
 	}
+}
+
+.range-slider {
+	margin: 2rem 0;
 }
 
 .attribution {

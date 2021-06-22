@@ -1,5 +1,6 @@
 const slider = document.querySelector('#slider');
 const toggle = document.querySelector('#toggle');
+const input = document.querySelector('input');
 
 const pageviews = document.querySelector('.main__top__k');
 const total = document.querySelector('.main__top__total');
@@ -33,15 +34,15 @@ slider.addEventListener('input', (e) => {
 	}
 });
 
-toggle.addEventListener('change', (e) => {
-	if (e.target.checked) {
-		discount.innerHTML = '';
-	} else {
-		discount.innerHTML = '25% discount';
-	}
-})
+// toggle.addEventListener('change', (e) => {
+// 	if (e.target.checked) {
+// 		discount.innerHTML = '';
+// 	} else {
+// 		discount.innerHTML = '25% discount';
+// 	}
+// })
 
-// Slider code taken from:
+// Range sliders are a nightmare. Slider code taken from:
 // https://codepen.io/nosurprisethere/pen/KJxwQz
 
 // Setting color of our sliders
@@ -50,19 +51,11 @@ const settings={
   background: 'hsl(224, 65%, 95%)'
 }
 
-// Find all our sliders
-const sliders = document.querySelectorAll('.range-slider');
-
-// Iterate through that list of sliders
-Array.prototype.forEach.call(sliders,(slider)=>{
-  // Look inside our slider for our input add an event listener
-//   ... the input inside addEventListener() is looking for the input action, we could change it to something like change
-  slider.querySelector('input').addEventListener('input', (event)=>{
-    applyFill(event.target);
-  });
-  // Don't wait for the listener, apply it now!
-  applyFill(slider.querySelector('input'));
+input.addEventListener('input', (event)=>{
+	applyFill(event.target);
 });
+// Don't wait for the listener, apply it now!
+applyFill(input);
 
 // This function applies the fill to our sliders by using a linear gradient background
 function applyFill(slider) {
