@@ -24,6 +24,7 @@ body {
 	font-size: 100%;
 	font-family: 'Manrope', sans-serif;
 	background: url('../images/bg-pattern.svg') no-repeat 0% -40%;
+	background-color: $v-pale-blue;
 	padding: 3rem 1.5rem;
 	color: $gray-blue-3;
 }
@@ -36,7 +37,7 @@ button, input {
 
 .header {
 	text-align: center;
-	height: 9rem;
+	height: 9.1rem;
 	background: url('../images/pattern-circles.svg') no-repeat center;
 	padding-top: 2rem;
 
@@ -57,7 +58,8 @@ button, input {
 	border-radius: 10px;
 	text-align: center;
 	margin-top: 2rem;
-	padding: 2rem 1rem;
+	padding: 2rem 0rem;
+	box-shadow: 4px 8px 10px 0px rgb(165, 165, 165);
 
 	&__top {
 		&__pageviews, &__k {
@@ -96,9 +98,40 @@ button, input {
 		}
 
 		&__divider {
-			margin: 2rem 0;
+			margin: 2rem 0 1rem 0;
 			border: none;
 			border-top: 1px solid $gray-blue-1;
+		}
+	}
+
+	&__footer {
+		&__ul {
+			list-style-image: url('../images/icon-check.svg');
+		}
+
+		&__item {
+			line-height: 2;
+			&__text {
+				margin-left: 1rem;
+			}
+		}
+
+		&__btn {
+			margin-top: 2rem;
+
+			&__start {
+				background-color: $dark-blue;
+				border: none;
+				font-size: 1rem;
+				color: $pale-blue;
+				padding: 1rem 4rem;
+				border-radius: 25px;
+				transition: color .2s;
+
+				&:hover {
+					color: $gray-blue-1;
+				}
+			}
 		}
 	}
 }
@@ -108,6 +141,7 @@ button, input {
 }
 
 .attribution {
+	margin-top: 1rem;
 	font-size: 11px;
 	text-align: center;
 }

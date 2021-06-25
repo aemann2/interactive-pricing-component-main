@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
 .range-slider__range {
   -webkit-appearance: none;
-  width: 90%;
+  width: 80%;
   height: 10px;
   border-radius: 5px;
   background: #eaeefb;
@@ -110,6 +110,7 @@ body {
   font-size: 100%;
   font-family: 'Manrope', sans-serif;
   background: url("../images/bg-pattern.svg") no-repeat 0% -40%;
+  background-color: #fafbff;
   padding: 3rem 1.5rem;
   color: #858fad;
 }
@@ -120,7 +121,7 @@ button, input {
 
 .header {
   text-align: center;
-  height: 9rem;
+  height: 9.1rem;
   background: url("../images/pattern-circles.svg") no-repeat center;
   padding-top: 2rem;
 }
@@ -141,7 +142,9 @@ button, input {
   border-radius: 10px;
   text-align: center;
   margin-top: 2rem;
-  padding: 2rem 1rem;
+  padding: 2rem 0rem;
+  -webkit-box-shadow: 4px 8px 10px 0px #a5a5a5;
+          box-shadow: 4px 8px 10px 0px #a5a5a5;
 }
 
 .main__top__pageviews, .main__top__k {
@@ -186,9 +189,40 @@ button, input {
 }
 
 .main__bottom__divider {
-  margin: 2rem 0;
+  margin: 2rem 0 1rem 0;
   border: none;
   border-top: 1px solid #eaeefb;
+}
+
+.main__footer__ul {
+  list-style-image: url("../images/icon-check.svg");
+}
+
+.main__footer__item {
+  line-height: 2;
+}
+
+.main__footer__item__text {
+  margin-left: 1rem;
+}
+
+.main__footer__btn {
+  margin-top: 2rem;
+}
+
+.main__footer__btn__start {
+  background-color: #293356;
+  border: none;
+  font-size: 1rem;
+  color: #bdccff;
+  padding: 1rem 4rem;
+  border-radius: 25px;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.main__footer__btn__start:hover {
+  color: #eaeefb;
 }
 
 .range-slider {
@@ -196,6 +230,7 @@ button, input {
 }
 
 .attribution {
+  margin-top: 1rem;
   font-size: 11px;
   text-align: center;
 }
