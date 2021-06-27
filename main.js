@@ -34,13 +34,19 @@ slider.addEventListener('input', (e) => {
 	}
 });
 
-// toggle.addEventListener('change', (e) => {
-// 	if (e.target.checked) {
-// 		discount.innerHTML = '';
-// 	} else {
-// 		discount.innerHTML = '25% discount';
-// 	}
-// })
+if (window.innerHeight < 900) {
+	discount.innerHTML = '25%'
+} else {
+	discount.innerHTML = '25% discount'
+}
+
+window.addEventListener('resize', e => {
+	if (e.target.innerWidth >= 900) {
+		discount.innerHTML = '25% discount'
+	} else {
+		discount.innerHTML = '25%'
+	}
+})
 
 // Range sliders are a nightmare. Slider code taken from:
 // https://codepen.io/nosurprisethere/pen/KJxwQz
