@@ -54,6 +54,8 @@ button, input {
 }
 
 .main {
+	max-width: 600px;
+	margin: 0 auto;
 	background-color: $white;
 	border-radius: 10px;
 	text-align: center;
@@ -174,9 +176,6 @@ button, input {
 	}
 
 	.main {
-		max-width: 700px;
-		margin: 0 auto;
-
 		&__top {
 			display: flex;
 			justify-content: space-evenly;
