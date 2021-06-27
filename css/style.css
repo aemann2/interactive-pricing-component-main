@@ -199,6 +199,7 @@ button, input {
 .main__footer__ul {
   list-style-image: url("../images/icon-check.svg");
   display: inline-block;
+  text-align: left;
 }
 
 .main__footer__item {

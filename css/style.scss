@@ -111,6 +111,7 @@ button, input {
 			list-style-image: url('../images/icon-check.svg');
 			// added inline-block for chrome
 			display: inline-block;
+			text-align: left;
 		}
 
 		&__item {
