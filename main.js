@@ -36,14 +36,19 @@ slider.addEventListener('input', (e) => {
 			price = 16;
 	}
 
+	if (toggle.checked) {
+		price = price * .75
+	}
+
 	total.innerText = `$${price}.00`
 });
 
 const setDiscount = () => {
-	if (toggle.checked) {
+	if (!toggle.checked) {
+		total.innerHTML = `$${price}.00`
+	}
+	else {
 		total.innerHTML = `$${price * .75}.00`;
-	} else {
-		total.innerHTML = `$${price}.00`;
 	}
 };
 
