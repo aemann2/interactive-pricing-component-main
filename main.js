@@ -51,17 +51,12 @@ toggle.addEventListener("input", setDiscount);
 
 
 // Changing the text for the badge based on window width
-if (window.innerHeight < 900) {
-	discount.innerHTML = '25%'
-} else {
-	discount.innerHTML = '25% discount'
-}
 
 window.addEventListener('resize', e => {
 	if (e.target.innerWidth >= 900) {
 		discount.innerHTML = '25% discount'
 	} else {
-		discount.innerHTML = '25%'
+		discount.innerHTML = '-25%'
 	}
 })
 
