@@ -6,34 +6,51 @@ const pageviews = document.querySelector('.main__top__k');
 const total = document.querySelector('.main__top__total');
 const discount = document.querySelector('.main__bottom__discount');
 
+// Event listeners for the slider and toggle button
+let price = 16;
+
 slider.addEventListener('input', (e) => {
 	switch(parseInt(e.target.value)) {
 		case 0: 
 			pageviews.innerHTML = '10K';
-			total.innerHTML = '$8.00';
+			price = 8;
 			break;
 		case 20: 
 			pageviews.innerHTML = '50K';
-			total.innerHTML = '$12.00';
+			price = 12;
 			break;
 		case 40: 
 			pageviews.innerHTML = '100K';
-			total.innerHTML = '$16.00';
+			price = 16;
 			break;
 		case 60: 
 			pageviews.innerHTML = '500K';
-			total.innerHTML = '$24.00';
+			price = 24;
 			break;
 		case 80: 
 			pageviews.innerHTML = '1M';
-			total.innerHTML = '$36.00';
+			price = 36;
 			break;
 		default:
 			pageviews.innerHTML = '100K';
-			total.innerHTML = '$16.00';
+			price = 16;
 	}
+
+	total.innerText = `$${price}.00`
 });
 
+const setDiscount = () => {
+	if (toggle.checked) {
+		total.innerHTML = `$${price * .75}.00`;
+	} else {
+		total.innerHTML = `$${price}.00`;
+	}
+};
+
+toggle.addEventListener("input", setDiscount);
+
+
+// Changing the text for the badge based on window width
 if (window.innerHeight < 900) {
 	discount.innerHTML = '25%'
 } else {
